@@ -1,17 +1,53 @@
 fun main(args: Array<String>){
 
-    println("Hello World")
+    // 자료형 //
+    // 숫자(int, long, double, float)
+    // 문자(String)
+    // boolean(true, false)
 
-    // val -> 변수값 변경 불가
-    val asdf = "test1"
-    println(asdf)
-    val box2 = "test2"
-    println(box2)
+    // 문자 -> 일이삼사
+    val test1 = "1234"
+    println(test1::class.java.simpleName)
+    // 일이삼사 + 일 -> 일이삼사일
+    println(test1 + 1)
 
-    // var -> 변수값 변경 가능
-    var box3 = "test3"
-    println(box3)
-    box3 = "test4"
-    println(box3)
+    // 숫자 -> 천이백삼십사
+    val test2 = 1234
+    println(test2::class.java.simpleName)
+    // 천이백삼십사 + 일 -> 천이백삼십오
+    println(test2 + 1)
 
+    // 소수점 붙은 숫자 -> double
+    val test3 = 123.456
+    println(test3::class.java.simpleName)
+
+    // 타입 지정하기
+    val test4 : Int = 123456
+    println(test4::class.java.simpleName)
+
+    // 잘못된 타입 지정 -> 에러 발생
+    // Kotlin: Type mismatch: inferred type is String but Int was expected
+//    val test5 : Int = "1234"
+//    println(test5)
+//    val test6 : Int = 12345678901234
+//    println(test6)
+
+    val test7 : Long = 12345678901234
+    println(test7)
+    val test8 : Float = 1234.5678f
+    println(test8)
+
+    // 데이터 타입 변경
+    val test9 : Int = 1234
+    println(test9::class.java.simpleName)
+    // Int -> String
+    val test10 = test9.toString()
+    println(test10::class.java.simpleName)
+
+    // 형변환 이라고도 함
+    val test11 : String = "1234"
+    val test12 = Integer.parseInt(test11)
+    // String -> Int
+    println(test12::class.java.simpleName)
+    println(test12 + 1234)
 }
