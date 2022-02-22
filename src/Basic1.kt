@@ -1,9 +1,9 @@
-fun main(args: Array<String>){
+// 자료형 //
+// 숫자(int, long, double, float)
+// 문자(String)
+// boolean(true, false)
 
-    // 자료형 //
-    // 숫자(int, long, double, float)
-    // 문자(String)
-    // boolean(true, false)
+fun main(args: Array<String>){
 
     // 문자 -> 일이삼사
     val test1 = "1234"
@@ -63,4 +63,5 @@ fun main(args: Array<String>){
 //    val test15 : String = null
     // test16은 String 또는 null이다
     val test16 : String? = null
+
 }
