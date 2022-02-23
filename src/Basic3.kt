@@ -35,5 +35,18 @@ fun main() {
     // 올바른 필터링(null 제외)
     println(testList5.filterNotNull().filter { it.startsWith("s") })
 
+    // test1에 test2의 값을 넣음 -> "a"가 "b"로 바뀜
+    var test1 : String = "a"
+    var test2 : String = "b"
+    test1 = test2
+    println(test1)
+
+    // test3에 test4의 값을 넣음 -> ?(null 일수도) 때문에 에러남
+    // !!(null 아님)를 붙여주면 에러가 나지 않음
+    var test3 : String = "c"
+    var test4 : String? = "d"
+//    test3 = test4
+    test3 = test4!!
+    println(test3)
 
 }
