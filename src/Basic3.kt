@@ -78,4 +78,11 @@ fun main() {
 //        }
 //    }
 
+    // 구구단 출력하기
+    for (i in 2..9) {
+        for (j in 1..9) {
+            val times = i * j
+            println("$i * $j : $times")
+        }
+    }
 }
