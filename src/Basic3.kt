@@ -49,4 +49,33 @@ fun main() {
     test3 = test4!!
     println(test3)
 
+    // 리스트 출력
+//    val testList6 = listOf("a", "b", "c","d", "e", "f")
+//    // 관습적으로 i로 씀 -> 다른 알파벳이어도 노상관
+//    for (i in testList6) {
+//        print(i)
+//    }
+
+    // 숫자 범위 지정
+//    for (j in 1..10) {
+//        print(j)
+//    }
+
+    // 3씩 더하기
+//    for (i in 1..10 step 3) {
+//        println(i)
+//    }
+
+    // 문자열과 함께 출력
+//    for (i in 1..3) {
+//        println("l의 값은 : $i")
+//    }
+
+    // 이중 반복문
+//    for (i in 1..3) {
+//        for (j in 1..3) {
+//            println("i is $i j is $j")
+//        }
+//    }
+
 }
