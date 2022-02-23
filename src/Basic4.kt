@@ -52,5 +52,17 @@ fun main () {
 
     println(testMap1[15])
 
+    // set -> 중복을 막아줌
+    val testSet1 = mutableSetOf("a", "b", "c")
+    println(testSet1)
+    testSet1.add("d")
+    testSet1.add("e")
+    println(testSet1)
+    testSet1.add("e")
+    testSet1.add("e")
+    testSet1.add("e")
+    println(testSet1)
+    testSet1.remove("e")
+    println(testSet1)
 }
 
