@@ -59,4 +59,31 @@ fun main() {
         println(testIterator.next())
     }
 
+    // 문제
+    val student = mutableMapOf<Int, String>()
+    student[99] = "지민"
+    student[20] = "민정"
+    student[35] = "시은"
+    student[48] = "세은"
+    student[100] = "원영"
+    student[22] = "유진"
+    student[45] = "다연"
+    student[88] = "채현"
+    student[91] = "수빈"
+    student[87] = "연준"
+    student[54] = "주연"
+    student[42] = "영훈"
+    // 점수가 50점 이상인 사람들의 이름만 반복문과 조건문을 통해 출력하세요
+    val testList = ArrayList<String>()
+    for (l in student) {
+        // 점수(key) 50점 이상인 사람들의
+        if(l.key >= 50) {
+            // 각각 이름(value) 출력
+            println(l.value)
+            // 이름 리스트로 만들어서
+            testList.add(l.value)
+        }
+    }
+    // 리스트 출력
+    println(testList)
 }
