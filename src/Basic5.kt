@@ -13,4 +13,10 @@ fun main() {
         println(count)
     }
 
+    // list
+    val testList1 = mutableListOf("a", "b", "c")
+    println(testList1)
+    for (i in testList1) {
+        println(i)
+    }
 }
