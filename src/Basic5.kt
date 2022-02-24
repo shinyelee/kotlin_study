@@ -42,4 +42,21 @@ fun main() {
         println(k)
     }
 
+    // iterator
+    val testList2 = mutableListOf("a", "b", "c")
+    val testIterator = testList2.listIterator()
+    println(testIterator.next()) // a
+    println(testIterator.next()) // a 다음 -> b
+    println(testIterator.hasNext()) // b 다음 -> c -> true
+    println(testIterator.next()) // b 다음 -> c
+    println(testIterator.hasNext()) // c 다음 -> 없음 -> false
+    println(testIterator.previous()) // false 이전 -> c
+    println(testIterator.previous()) // c 이전 -> b
+    println(testIterator.previous()) // b 이전 -> a
+
+    // 활용
+    while (testIterator.hasNext()) {
+        println(testIterator.next())
+    }
+
 }
