@@ -27,26 +27,36 @@ fun main() {
 //        }
 //    }
 
-    val color = Color.GREEN
-    when(color) {
-        Color.RED -> {
-            println(Color.RED.colorName)
-        }
-        Color.GREEN -> {
-            println(Color.GREEN.colorName)
-        }
-        Color.BLUE -> {
-            println(Color.BLUE.colorName)
-        }
-    }
+//    val color = Color.GREEN
+//    when(color) {
+//        Color.RED -> {
+//            println(Color.RED.colorName)
+//        }
+//        Color.GREEN -> {
+//            println(Color.GREEN.colorName)
+//        }
+//        Color.BLUE -> {
+//            println(Color.BLUE.colorName)
+//        }
+//    }
+
+    println(Device.DEVICE_ON.status)
+    Device.DEVICE_ON.status = "OFF"
+    println(Device.DEVICE_ON.status)
 
 }
 
-enum class Color(val colorName : String) {
-    RED("빨강"),
-    GREEN("초록"),
-    BLUE("파랑")
+enum class Device(var status : String) {
+    DEVICE_ON("ON"),
+    NETWORK("OFF"),
+    LOCATION("SEOUL")
 }
+
+//enum class Color(val colorName : String) {
+//    RED("빨강"),
+//    GREEN("초록"),
+//    BLUE("파랑")
+//}
 
 //enum class Direction {
 //    NORTH, SOUTH, WEST, EAST
