@@ -2,37 +2,56 @@
 
 fun main() {
 
-    println(Direction.NORTH)
-    Direction.values().forEach {
-        println(it)
-    }
+//    println(Direction.NORTH)
+//    Direction.values().forEach {
+//        println(it)
+//    }
+//
+//    CustomerType.values().forEach {
+//        println(it)
+//    }
 
-    CustomerType.values().forEach {
-        println(it)
-    }
+//    val direction = Direction.EAST
+//    when(direction) {
+//        Direction.NORTH -> {
+//            println("N")
+//        }
+//        Direction.SOUTH -> {
+//            println("S")
+//        }
+//        Direction.WEST -> {
+//            println("W")
+//        }
+//        Direction.EAST -> {
+//            println("E")
+//        }
+//    }
 
-    val direction = Direction.EAST
-    when(direction) {
-        Direction.NORTH -> {
-            println("N")
+    val color = Color.GREEN
+    when(color) {
+        Color.RED -> {
+            println(Color.RED.colorName)
         }
-        Direction.SOUTH -> {
-            println("S")
+        Color.GREEN -> {
+            println(Color.GREEN.colorName)
         }
-        Direction.WEST -> {
-            println("W")
-        }
-        Direction.EAST -> {
-            println("E")
+        Color.BLUE -> {
+            println(Color.BLUE.colorName)
         }
     }
 
 }
 
-enum class Direction {
-    NORTH, SOUTH, WEST, EAST
+enum class Color(val colorName : String) {
+    RED("빨강"),
+    GREEN("초록"),
+    BLUE("파랑")
 }
 
-enum class CustomerType {
-    A, B, C, D, VIP
-}
+//enum class Direction {
+//    NORTH, SOUTH, WEST, EAST
+//}
+
+//enum class CustomerType {
+//    A, B, C, D, VIP
+//}
