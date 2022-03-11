@@ -11,6 +11,18 @@ fun main() {
     println("pine" sum3 "apple")
     println("ba" sum4 "nana")
 
+    // 리스트
+    println(10 showList 20)
+
+}
+
+infix fun Int.showList(num : Int) : List<Int> {
+    val list = mutableListOf<Int>()
+    for (i in this..num) {
+        list.add(i)
+    }
+    // println(this)
+    return list
 }
 
 infix fun String.sum3(abc : String) : String = this + abc
