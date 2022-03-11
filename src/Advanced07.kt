@@ -42,8 +42,27 @@ fun main() {
     }
     println(result2)
 
+    // apply
+    // 값을 반환하지 않고, 객체 구성에 대해 주로 사용
+    val tester1 = Person("Tester1")
+    println(tester1)
+    tester1.age = 20
+    tester1.city = "Seoul"
+    println(tester1)
+
+    val tester2 = Person("Tester2").apply {
+        age = 21
+        city = "Busan"
+    }
+    println(tester2)
+
 }
 
+data class Person(
+    var name : String,
+    var age : Int = 0,
+    var city : String = ""
+)
 class multiPortService(var url : String, var port : Int) {
     fun prepareRequest() : String = "기본 요청 url $url"
     fun query(request : String) = "결과 query $request"
