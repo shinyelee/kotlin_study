@@ -56,6 +56,19 @@ fun main() {
     }
     println(tester2)
 
+    // also
+    // 객체에 대해 추가적인 작업
+    val nums = mutableListOf(1, 2, 3, 4)
+    println("$nums 여기에서 5를 추가합니다")
+    nums.add(5)
+    println(nums)
+
+    val nums2 = mutableListOf(1, 2, 3, 4)
+    nums2.also {
+        println("$nums2 여기에서 5를 추가합니다")
+    }.add(5)
+    println(nums2)
+
 }
 
 data class Person(
@@ -63,6 +76,7 @@ data class Person(
     var age : Int = 0,
     var city : String = ""
 )
+
 class multiPortService(var url : String, var port : Int) {
     fun prepareRequest() : String = "기본 요청 url $url"
     fun query(request : String) = "결과 query $request"
