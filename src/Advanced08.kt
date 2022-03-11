@@ -1,0 +1,38 @@
+// enum(enumerations) class
+
+fun main() {
+
+    println(Direction.NORTH)
+    Direction.values().forEach {
+        println(it)
+    }
+
+    CustomerType.values().forEach {
+        println(it)
+    }
+
+    val direction = Direction.EAST
+    when(direction) {
+        Direction.NORTH -> {
+            println("N")
+        }
+        Direction.SOUTH -> {
+            println("S")
+        }
+        Direction.WEST -> {
+            println("W")
+        }
+        Direction.EAST -> {
+            println("E")
+        }
+    }
+
+}
+
+enum class Direction {
+    NORTH, SOUTH, WEST, EAST
+}
+
+enum class CustomerType {
+    A, B, C, D, VIP
+}
