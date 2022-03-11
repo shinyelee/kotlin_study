@@ -20,4 +20,14 @@ fun main() {
     }
     println(length2)
 
+    // with
+    // 컨텍스트 내부에서 함수 호출
+    val numbers = mutableListOf("a", "b", "c", "d")
+    println(numbers.first())
+    println(numbers.last())
+    val firstAndLast = with(numbers) {
+        "${first()} and ${last()}"
+    }
+    println(firstAndLast)
+
 }
