@@ -1,4 +1,4 @@
-// variables(변수)
+// Variables(변수)
 
 fun main() {
 

@@ -1,4 +1,4 @@
-// numbers(숫자)
+// Numbers(숫자)
 
 fun main() {
 
