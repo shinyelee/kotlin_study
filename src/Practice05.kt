@@ -15,7 +15,6 @@ fun main(){
 
 }
 
-
 fun solutions(arr: ArrayList<String>): Double {
 
     var sum = 0
