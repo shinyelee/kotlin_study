@@ -39,7 +39,7 @@ fun solution(list: ArrayList<Int>) : Int{
     for(i in list) {
         result += i
     }
-    
+
     return result
 
 }
