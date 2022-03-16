@@ -34,7 +34,6 @@ fun solutions( str : String ): Map<String, Int> {
 
     // 내림차순 정렬
     val resultMap = mutableMapOf<String, Int>()
-
     for(i in 0..distinctList.count()-1) {
         resultMap[distinctList[i]] = countList[i]
     }
