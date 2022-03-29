@@ -1,7 +1,7 @@
-// 자료형 //
-// 숫자(int, long, double, float)
-// 문자(String)
-// boolean(true, false)
+// Data Type (자료형) //
+// 숫자 -> int, long, double, float
+// 문자 -> String
+// boolean -> true, false
 
 fun main(args: Array<String>){
 

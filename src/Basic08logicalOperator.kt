@@ -1,4 +1,4 @@
-// 논리연산
+// Logical Operators (논리연산자)
 // && (and)
 // || (or)
 // ! (not)

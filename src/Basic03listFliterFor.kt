@@ -1,4 +1,4 @@
-// 리스트와 filter
+// list와 filter
 // ?와 !
 // 반복문
 
