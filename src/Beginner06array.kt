@@ -14,4 +14,9 @@ fun main() {
     println(cardNames[0])
 //    println(firstCard)
 
+    // null로 채워진 배열 생성
+    // <>안에 배열에 할당할 자료형 지정 -> Generic
+    // ()로 배열 크기 지정
+    var nullArr = arrayOfNulls<Int>(5)
+
 }
