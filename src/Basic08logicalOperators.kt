@@ -1,8 +1,10 @@
 // 논리연산
 // && (and)
 // || (or)
+// ! (not)
 // 남자 && 20세 이상 -> 두 조건 모두 해당해야 함(and)
 // 남자 || 30세 이상 -> 둘 중 하나만 해당해도 됨(or)
+// !남자 -> 해당 조건을 반대로 해석(not)
 
 fun main() {
 
@@ -22,6 +24,14 @@ fun main() {
         println("OR 만족")
     } else {
         println("OR 불만족")
+    }
+
+    // ! (not)
+        val score1 = 100
+    if (score1 != 100) {
+        println("100점이 아니야!")
+    } else {
+        println("100점! ")
     }
 
     // 문제
