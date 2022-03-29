@@ -1,4 +1,4 @@
-// List 가공하기
+// List Format(리스트 가공)
 
 fun main() {
 

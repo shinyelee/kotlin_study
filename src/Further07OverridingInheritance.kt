@@ -1,6 +1,6 @@
-// inheritance(상속)
+// Inheritance(상속)
 // 자식 클래스가 부모 클래스의 멤버를 물려받음
-// overriding(오버라이딩)
+// Overriding(오버라이딩)
 // 부모클래스의 메소드를 자식클래스에서 재정의해서 사용할 수 있음
 
 fun main() {

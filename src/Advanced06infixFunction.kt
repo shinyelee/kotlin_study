@@ -1,4 +1,4 @@
-// infix function
+// Infix Function(중위 함수)
 
 fun main() {
 

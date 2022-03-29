@@ -1,5 +1,4 @@
-// 지연초기화
-// lateinit / lazy
+// Lateinit / Lazy(지연초기화)
 
 fun main() {
 

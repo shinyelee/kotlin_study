@@ -1,4 +1,4 @@
-// enum(enumerations) class
+// Enum(enumerations) Class
 
 fun main() {
 

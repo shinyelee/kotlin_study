@@ -1,3 +1,5 @@
+// Class(클래스)
+
 // class == 값 + 기능
 // function == 기능
 

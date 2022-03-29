@@ -1,4 +1,4 @@
-// abstract class(추상클래스)
+// Abstract Class(추상클래스)
 
 fun main() {
 
