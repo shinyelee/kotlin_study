@@ -2,18 +2,27 @@
 
 fun main() {
 
-    // Int -> 32비트 정수(기본)
-    // Long -> 64비트 정수
-    // Float -> 32비트 소수
-    // Double -> 64비트 소수(기본)
+    // 정수형
+    // Byte -> 8비트
+    // Short -> 16비트
+    // Int -> 32비트(기본)
+    // Long -> 64비트
 
-    val num1 = 42 // Int -> 정수
+    // 실수형
+    // Float -> 32비트
+    // Double -> 64비트(기본)
+
+    // 16진수 -> 0x
+    // 2진수 -> 0b
+    // 를 해당 숫자 앞에 붙여줌
+
+   val num1 = 42 // Int -> 정수
     val num2 = 3.14 // Double -> 10진수
 
-    val num3 = 42L // Long -> 반드시 대문자 L
+    val num3 = 42L // Long -> L만 가능
 //    val num3 = 42l
 //    Kotlin: Use 'L' instead of 'l'
-    val num4 = 3.14f // Float -> 대소문자 상관X
+    val num4 = 3.14f // Float -> F, f 상관X
 //    val num4 = 3.14F
 
     // 타입 바꾸려면 -> toType 함수 사용
