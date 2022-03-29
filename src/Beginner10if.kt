@@ -21,7 +21,8 @@ fun main() {
     }
     println(aIsBigger2)
 
-    // {} 생략
+    // 실행할 구문이 하나라면
+    // {} 생략 가능
     val aIsBigger3 = if (a > b) true else false
     println(aIsBigger3)
 

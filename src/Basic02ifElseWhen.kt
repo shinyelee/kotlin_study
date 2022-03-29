@@ -1,9 +1,19 @@
-// 조건문 //
-// if else
+// 조건문
+// if
+// else
 // when
 
 fun main() {
 
+    // 비교연산자
+    // < <=
+    // > >=
+    // == !=
+
+    // 할당연산자
+    // =
+
+    // if는 참/거짓 확인
     // 150 이상이 아님
 //    val studentScore1 = 100
 //    if (studentScore1 >= 150) {
@@ -43,6 +53,7 @@ fun main() {
 //    }
 
     // when 사용
+    // 하나의 변수를 여러 개의 값과 비교 가능
 //    val score = 80
 //    when(score) {
 //        100 -> {
