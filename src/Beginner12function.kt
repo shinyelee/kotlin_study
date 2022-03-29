@@ -4,6 +4,7 @@ fun main() {
 
     // 함수
     printJack()
+    add(1, 2, 3)
 
     // 매개변수 추가한 함수
     printCard("ive", 11)
@@ -27,6 +28,12 @@ fun printCard(cardName: String, cardValue: Int) {
 fun getCardString(cardName: String, cardValue: Int): String {
     return("$cardName = $cardValue")
 }
+
+// single-expression function(단일 표현식 함수)
+//fun add(a: Int, b: Int, d: Int): Int {
+//    return a + b + c
+//}
+fun add(a: Int, b: Int, c: Int) = a + b + c
 
 // getCardString과 동일함
 // {}와 return 생략하고 = 씀
