@@ -16,3 +16,6 @@ fun a (str: String) {
 fun b (function: (String)->Unit) {
     function("b가 호출한")
 }
+
+// 고차 함수, 람다 함수 어따 씀?
+// -> 컬렉션의 조작, 스코프 함수 사용에 도움됨

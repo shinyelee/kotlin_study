@@ -1,44 +1,19 @@
-// Lambda(람다)
+// Lambda Function(람다 함수)
+// 고차함수 그잡채 -> 별도의 연산자 없이 변수에 담을 수 있음
 
 fun main() {
 
-//    println(a())
-//    println(b())
+    bb(::aa)
 
-    // 기본
-    println(sums(1, 2))
-
-    // 람다
-    println(sumNumber(1, 2))
-    println(sumTypeNumber(1, 2))
-    println(sumTypeNumberNull(1, 2))
-
-    println(sumString("1", "2"))
-    println(sumString2("1", "2"))
-    println(sumStringType2("1", "2"))
-
+//    val cc: (String)->Unit = {str: String -> println("$str 람다함수 cc")}
+    // 이렇게 냅다 축약해도 됨
+    val cc = {str: String -> println("$str 람다함수 cc")}
 }
 
-// 람다
-fun sumString(a : String, b : String) : String {
-    return "string1 : $a string2 : $b"
-}
-val sumString2 = {a : String, b : String -> "string1 : $a string2 : $b"}
-val sumStringType2 : (String, String) -> String = {a, b -> "string1 : $a string2 : $b"}
-
-val sumNumber = {a: Int, b : Int -> a + b}
-val sumTypeNumber : (Int, Int) -> Int = {a, b -> a + b}
-val sumTypeNumberNull : (Int, Int) -> Int? = {a, b -> null}
-
-// 기본
-fun sums(a : Int, b : Int) : Int {
-    return a + b
+fun aa (str: String) {
+    println("$str 함수 aa")
 }
 
-//fun a() : String {
-//    return "text"
-//}
-//
-//// a랑 똑같은데 간소화 한 버전
-//fun b() = "text"
-
+fun bb (function: (String)->Unit) {
+    function("bb가 호출한")
+}
