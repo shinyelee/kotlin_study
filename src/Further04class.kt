@@ -36,7 +36,8 @@ fun main() {
 // 인스턴스 속성 초기화 && 인스턴스 생성시 구문 수행
 
 
-class Singer (var name: String, val birthYear: Int) {
+class Singer (var name: String, val birthYear: Int)
+{
     // init
     // 파라미터/반환형 없는 함수
     // 생성자 -> 인스턴스 생성시 호출됨
