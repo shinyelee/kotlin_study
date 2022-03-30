@@ -1,54 +1,36 @@
-// Abstract Class(추상클래스)
+// Abstract(추상화)
+
+// Abstraction Function(추상 함수)
+// 선언부만 있고 기능이 구현되지 않은 함수
+
+// Abstraction Class(추상 클래스)
+// 추상 함수를 포함하는 클래스
 
 fun main() {
 
-//    Bike().wheel()
-//    Bike().engine()
-    BMW().wheel()
-    BMW().engine()
-    Benz().wheel()
-    Benz().engine()
+    var r = Carot()
+
+    r.lead()
+    r.response()
 
 }
 
-//open class Car {
-//    open fun wheel() {
-//        println("굴러갑니다")
-//    }
-//    open fun engine() {
-//        println("시동이 켜졌습니다")
-//    }
-//}
-//
-//class Bike() : Car() {
-//    override fun wheel() {
-//        println("자전거가 굴러갑니다")
-//    }
-//}
-
-
-// 추상클래스
-abstract class Car {
-    abstract fun wheel()
-    abstract fun engine()
-}
-
-class BMW() : Car() {
-    override fun wheel() {
-        println("BMW 굴러갑니다")
-    }
-    override fun engine() {
-        println("BMW 시동이 켜졌습니다")
+abstract class Game {
+    // 얘는 추상 함수(껍데기만 있음)
+    abstract fun response()
+    // 얘는 일반 함수(내용물이 있음)
+    fun lead() {
+        println("바니바니 바니바니")
     }
 }
-// 둘 중 하나라도 안 채워지면 에러
-// Kotlin: Class 'BMW' is not abstract and does not implement abstract base class member public abstract fun wheel(): Unit defined in Car
+// 추상 클래스는 일부 함수가 구현되지 않은 미완성 클래스
+// -> 단독으로 인스턴스 만들기 불가능
+// -> 서브 클래스에서 상속을 받아 추상 함수를 구현해야 함
 
-class Benz() : Car() {
-    override fun wheel() {
-        println("Benz 굴러갑니다")
-    }
-    override fun engine() {
-        println("Benz 시동이 켜졌습니다")
+// Animal 상속 받음
+class Carot : Game() {
+    // eat 함수가 실제 동작되는 구현부
+    override fun response() {
+        println("당근 당근")
     }
 }

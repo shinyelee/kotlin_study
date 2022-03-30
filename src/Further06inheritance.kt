@@ -1,4 +1,5 @@
 // Inheritance(상속)
+// 자식 클래스가 부모 클래스의 멤버를 물려받음
 
 fun main() {
 
@@ -9,7 +10,7 @@ fun main() {
     a.introduce()
     b.introduce()
 
-    // bark()는 Dog 클래스에만 해당함
+    // bark는 Dog 클래스에만 해당함
 //    a.bark()
     b.bark()
 
