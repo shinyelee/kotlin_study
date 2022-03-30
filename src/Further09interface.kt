@@ -1,64 +1,37 @@
-// 인터페이스(Interface)
+// Interface(인터페이스)
+// 서로 다른 기능들을 여러개 물려줘야 할 때 유용한 기능
+
+// 추상함수로만 이루어져있는 순수 추상화 기능
+// 속성 || 추상함수 || 일반함수 가질 수 있음
+// 생성자를 가질 수 없음
 
 fun main() {
 
-    BMW3().wheel()
-    BMW3().engine()
-    BMW3().autoDriving()
-    BMW3().autoParking()
+    var d = Dogs()
+
+    d.run()
+    d.eat()
 
 }
 
-//interface Car2 {
-//    fun wheel()
-//    fun engine()
-//}
-//
-//class BMW2() : Car2 {
-//    override fun wheel() {
-//        println("wheel 돌아감")
-//    }
-//    override fun engine() {
-//        println("엔진 돌아감")
-//    }
-//}
-
-abstract class Car3 {
-    abstract fun wheel()
-    abstract fun engine()
+// 구현부 X 함수 -> 자동으로 abstract 함수로 인식 -> abstract 생략
+interface Runner {
+    fun run()
 }
 
-interface CarAutoDriving {
-    fun autoDriving()
-}
-
-interface CarAutoParking {
-    fun autoParking()
-}
-
-class BMW3() : Car3(), CarAutoDriving, CarAutoParking {
-    override fun wheel() {
-        println("wheel 돌아감")
-    }
-    override fun engine() {
-        println("엔진 돌아감")
-    }
-    override fun autoDriving() {
-        println("BMW3 자율주행")
-    }
-    override fun autoParking() {
-        println("BMW 자동주차")
+// 구현부 O 함수 -> 자동으로 open 함수로 인식 -> open 생략
+interface Eater {
+    fun eat() {
+        println("음식을 먹습니다")
     }
 }
 
-class Benz3() : Car3() {
-    override fun wheel() {
-        println("wheel 돌아감")
+// 서브 클래스 하나가 한 번에 여러 인터페이스를 상속 받을 수 있음
+class Dogs : Runner, Eater {
+    override fun run() {
+        println("WADADA WADADA 달려")
     }
-    override fun engine() {
-        println("엔진 돌아감")
-    }
-    fun autoParking() {
-        println("Benz3 자동주차")
+    override fun eat() {
+        println("like hubba-hubba")
     }
 }
