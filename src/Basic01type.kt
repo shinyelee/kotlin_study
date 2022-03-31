@@ -1,9 +1,16 @@
-// Data Type (자료형) //
-// 숫자 -> int, long, double, float
-// 문자 -> String
-// boolean -> true, false
+// Data Type(자료형) //
 
-fun main(args: Array<String>){
+// 코틀린 기준,
+// 코딩시 -> Reference Data Type(참조형 자료형)
+// 컴파일 단계 -> Primitive Data Type(기본형 자료형)
+
+// 정수 자료형
+// 실수 자료형
+// 문자 자료형
+// 문자열 자료형
+// 논리 자료형
+
+fun main(){
 
     // 문자 -> 일이삼사
     val test1 = "1234"
