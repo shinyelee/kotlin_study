@@ -1,4 +1,4 @@
-// Booleans(불린/불리언/논리형)
+// Booleans(불린/불리언/논리형) //
 
 fun main() {
 
