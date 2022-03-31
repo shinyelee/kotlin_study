@@ -12,37 +12,66 @@
 
 fun main(){
 
-    // 문자 -> 일이삼사
-    val test1 = "1234"
+    // Type Inference(타입 추론) //
+
+    // 코틀린은 똑똑하기 때문에 알아서 자료형(변수 타입)을 때려맞춤
+    // -> 정수는 Int, 실수는 Double이 기본값
+    // -> 자료형을 코드에 명시하지 않아도 됨
+    // (Byte, Short 등을 사용하려면 자료형을 명시하면 됨)
+
+    var apple = 1234
+    // var apple: Int = 1234
+    // 기본적으로 정수는 Int형으로 추론
+
+    var banana = 1234L
+    // var apple: Long = 1234L
+    // 정수에 L 붙어있으면 Long형으로 추론
+
+    var cherry = 12.45
+    // var apple: Double = 12.45
+    // 기본적으로 실수는 Double형으로 추론
+
+    var dragonFruit = 12.45f
+    // var apple: Float = 12.45f
+    // 실수에 f 붙어있으면 Float형으로 추론
+
+    var fig = 0xABCD
+    var grape = 0b0101010
+    // 16진수, 2진수는 Int형으로 추론
+
+    var kiwi = true
+    var lemon = 'l'
+    // Boolean형, Char형도 알아서 추론
+
+
+
+    // 비슷하게 생겼지만 문자와 숫자는 다르다
+
+    // 문자 -> 일이삼사 + 일
+    var test1 = "1234"
     println(test1::class.java.simpleName)
-    // 일이삼사 + 일 -> 일이삼사일
     println(test1 + 1)
+//    12341
 
-    // 숫자 -> 천이백삼십사
-    val test2 = 1234
+    // 숫자 -> 천이백삼십사 + 일
+    var test2 = 1234
     println(test2::class.java.simpleName)
-    // 천이백삼십사 + 일 -> 천이백삼십오
     println(test2 + 1)
+//    1235
 
-    // 소수점 붙은 숫자 -> double
-    val test3 = 123.456
-    println(test3::class.java.simpleName)
 
-    // 타입 지정하기
-    val test4 : Int = 123456
-    println(test4::class.java.simpleName)
 
     // 잘못된 타입 지정 -> 에러 발생
-    // Kotlin: Type mismatch: inferred type is String but Int was expected
-//    val test5 : Int = "1234"
+    // 틀리게 쓰느니 안 쓰는 게 낫다
+    var test5 = "5678"
+//    val test5 : Int = "5678"
 //    println(test5)
-//    val test6 : Int = 12345678901234
-//    println(test6)
+//    Kotlin: Type mismatch: inferred type is String but Int was expected
 
-    val test7 : Long = 12345678901234
-    println(test7)
-    val test8 : Float = 1234.5678f
-    println(test8)
+    var test6 = 5678
+//    val test6 : String = 5678
+//    println(test6)
+//    Kotlin: Type mismatch: inferred type is String but Int was expected
 
 
 
