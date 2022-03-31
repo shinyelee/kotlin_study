@@ -44,19 +44,48 @@ fun main(){
     val test8 : Float = 1234.5678f
     println(test8)
 
-    // 데이터 타입 변경
-    val test9 : Int = 1234
-    println(test9::class.java.simpleName)
-    // Int -> String
-    val test10 = test9.toString()
-    println(test10::class.java.simpleName)
 
-    // 형변환 이라고도 함
-    val test11 : String = "1234"
-    val test12 = Integer.parseInt(test11)
-    // String -> Int
-    println(test12::class.java.simpleName)
-    println(test12 + 1234)
+
+    // Type Casting(형변환) //
+
+    // 자료형을 변경하는 기능
+    // 논리형은 형변환 불가능
+
+    // Explicit Type Casting(명시적 형변환)
+    // -> 코틀린에서 사용하는 형변환
+    // 변환될 자료형을 개발자가 직접 지정함
+
+    // Implicit Type Casting(암시적/묵시적 형변환)
+    // -> 코틀린에서 지원 안 함
+    // 자료형 지정하지 않아도 변수 할당시 자동으로 형변환됨
+
+
+
+    var a: Int = 321
+    var b: Long = a.toLong()
+//    var b: Long = a
+// Kotlin: Type mismatch: inferred type is Int but Long was expected
+    // a는 Int, b는 Long -> 냅다 할당하면 에러 발생
+    // Long형으로 바꾸기 위해 toLong() 함수 사용
+
+    var c = 119
+    var d: String = c.toString()
+//    var d: String = c
+
+
+
+    // Type Casting Function(형변환 함수) //
+
+    // toByte()
+    // toShort()
+    // toInt()
+    // toLong()
+    // toFloat()
+    // toDouble()
+    // toChar()
+    // toString()
+
+
 
     // 그냥 공백
     val test13 = ""

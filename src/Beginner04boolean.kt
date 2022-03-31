@@ -12,4 +12,5 @@ fun main() {
     println(isBadDay)
 //    true
 //    false
+
 }
