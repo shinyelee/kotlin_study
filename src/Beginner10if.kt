@@ -1,8 +1,8 @@
-// If Expression(if 표현식) //
-
-// if문의 조건이 참이면 -> 구문 실행
-
 fun main() {
+
+    // If Expression(if 표현식) //
+
+    // if문의 조건이 참이면 -> 구문 실행
 
     // 일반적인 쓰임
     val a = 3

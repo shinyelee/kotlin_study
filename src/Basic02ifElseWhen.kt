@@ -5,56 +5,60 @@
 
 fun main() {
 
-    // 비교연산자
-    // < <=
-    // > >=
-    // == !=
-
-    // 할당연산자
-    // =
-
     // if는 참/거짓 확인
-    // 150 이상이 아님
-//    val studentScore1 = 100
-//    if (studentScore1 >= 150) {
-//        println("150 이상")
-//    } else {
-//        println("150 이상이 아님")
-//    }
 
-    // 50 이상
-//    val studentScore2 = 50
-//    if (studentScore2 > 50) {
-//        println("50 초과")
-//    }
-//    if (studentScore2 >= 50) {
-//        println("50 이상")
-//    }
+    // if + else 조합이 보통임
+    var studentScore1 = 100
+    if (studentScore1 >= 150) {
+        println("150 이상")
+    } else {
+        println("150 이상이 아님")
+    }
+//    150 이상이 아님
+
+    // if 구문을 여러 개 써도 됨
+    // 둘 중 하나만 해당 -> 하나만 출력
+    var studentScore2 = 50
+    if (studentScore2 > 50) {
+        println("50 초과")
+    }
+    if (studentScore2 >= 50) {
+        println("50 이상")
+    }
+//    50 이상
 
     // 둘 다 해당 -> 둘 다 출력
-//    val studentScore3 = 65
-//    if (studentScore3 < 70) {
-//        println("70미만")
-//    }
-//    if (studentScore3 <= 70) {
-//        println("70이하")
-//    }
+    var studentScore3 = 65
+    if (studentScore3 < 70) {
+        println("70미만")
+    }
+    if (studentScore3 <= 70) {
+        println("70이하")
+    }
+//    70미만
+//    70이하
 
-    // 30보다 큼
-//    val studentScore4 = 40
-//    if (studentScore4 > 100) {
-//        println("100보다 큼")
-//    } else if (studentScore4 > 50) {
-//        println("50보다 큼")
-//    } else if (studentScore4 > 30) {
-//        println("30보다 큼")
-//    } else {
-//        println("30보다 작음")
-//    }
+    // 여러 조건 중 하나만 얻어걸리면 된다 -> if else 사용
+    var studentScore4 = 40
+    if (studentScore4 > 100) {
+        // 처음은 무조건 if
+        println("100보다 큼")
+    } else if (studentScore4 > 50) {
+        // if 말고 다른 조건은 else if
+        println("50보다 큼")
+    } else if (studentScore4 > 30) {
+        println("30보다 큼")
+    } else {
+        // 맨 마지막 쩌리는 else
+        println("30보다 작음")
+    }
+//    30보다 큼
+
+
 
     // when 사용
     // 하나의 변수를 여러 개의 값과 비교 가능
-//    val score = 80
+//    var score = 80
 //    when(score) {
 //        100 -> {
 //            println("100")
@@ -73,7 +77,7 @@ fun main() {
     // 간단한 조건문을 이용한 문제풀이
     // 학생의 A B C D F 점수를 출력
 
-    val score = 80
+    var score = 80
 
     // 학생의 점수가
     // 100 초과 == A
