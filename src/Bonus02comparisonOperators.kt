@@ -82,6 +82,6 @@ fun main() {
     }
 //    this is not int
 
-    // is 연산자는 나중에 Any, as 배울 때 재등장
+    // is 연산자는 나중에 재등장
 
 }

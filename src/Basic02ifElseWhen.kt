@@ -61,24 +61,6 @@ fun main() {
 
 
 
-    // when 사용
-    // 하나의 변수를 여러 개의 값과 비교 가능
-    var score1 = 80
-    when(score1) {
-        100 -> {
-            println("100")
-        }
-        90 -> {
-            println("90")
-        }
-        80 -> {
-            println("80")
-        }
-        else -> {
-            println("no")
-        }
-    }
-
     // 간단한 조건문을 이용한 문제풀이
     // 학생의 A B C D F 점수를 출력
 
@@ -102,5 +84,76 @@ fun main() {
     } else {
         println("F")
     }
+//    D
 
+
+
+    // when
+    // switch문을 좀 더 편리하게 바꾼 기능
+    // 하나의 변수를 여러 개의 값과 비교 가능
+    // 등호, 부등호 사용 불가
+    // 여러 조건에 부합해도 제일 처음 만족하는 구간에서 실행 종료
+
+    var score1 = 80
+
+    when(score1) {
+        100 -> {
+            println("100")
+        }
+        90 -> {
+            println("90")
+        }
+        80 -> {
+            println("80")
+        }
+        else -> {
+            println("no")
+        }
+    }
+//    80
+
+
+
+    doWhen(1)
+    // 1 만족 -> 종료
+    // (!is String도 만족)
+
+    doWhen(1L)
+    // is Long 만족 -> 종료
+    // (!is String도 만족)
+
+    doWhen(1.1)
+    // !is String 만족 -> 종료
+
+    doWhen("shinyelee")
+    // "shinyelee" 만족 -> 종료
+
+    doWhen("shinye")
+    // else 만족 -> 종료
+
+}
+
+// Any 자료형은 나중에 재등장
+
+// 조건문.ver
+//fun doWhen (a: Any) {
+//    when(a) {
+//        1 -> println("1")
+//        "shinyelee" -> println("my name")
+//        is Long -> println("long type"
+//        !is String -> println("not string")
+//        else -> println("else")
+//    }
+//}
+
+// 표현식.ver
+fun doWhen (a: Any) {
+    var result = when(a) {
+        1 -> "1"
+        "shinyelee" -> "my name"
+        is Long -> "long type"
+        !is String -> "not string"
+        else -> "else"
+    }
+    println(result)
 }
