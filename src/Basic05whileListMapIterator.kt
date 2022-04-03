@@ -59,6 +59,12 @@ fun main() {
         println(testIterator.next())
     }
 
+
+
+//    while (stillDownloading) {
+//        println("Downloading…")
+//    }
+
     // 문제
     val student = mutableMapOf<Int, String>()
     student[99] = "지민"
