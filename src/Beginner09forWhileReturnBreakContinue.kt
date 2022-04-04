@@ -162,34 +162,49 @@ fun main() {
     // return //
     // 함수 종료 -> 값 반환
 
+
+
     // break //
     // 반복문 종료 -> 다음 구문으로 넘어감
-    for (l in 11..20) {
-        if(l == 13) break
-        println(l)
+    for (n in 11..20) {
+        if(n == 13) break
+        // n == 11 -> 11 출력
+        // n == 12 -> 12 출력
+        // n == 13 -> 종료
+        println(n)
     }
-    // l == 11 -> 11 출력
-    // l == 12 -> 12 출력
-    // l == 13 -> 종료
-    // 11 12 출력됨
+    // 11
+    // 12
+
+
 
     // continue //
     // 다음 반복 조건으로 넘어감
-    for (m in 11..20) {
-        if(m == 13) continue
-        println(m)
+    for (o in 11..20) {
+        if(o == 13) continue
+        // o == 11 -> 11 출력
+        // o == 12 -> 12 출력
+        // o == 13 -> 14로 넘어감
+        println(o)
     }
-    // l == 11 -> 11 출력
-    // l == 12 -> 12 출력
-    // l == 13 -> 14로 넘어감
-    // 11 12 14 15 16 17 18 19 20 출력됨
+//    11
+//    12
+//    14
+//    15
+//    16
+//    17
+//    18
+//    19
+//    20
 
-    // 다중반복문에서 break, continue 사용 -> label로 지정
-    // @대충아무단어 형태로 사용
-    loop@for (n in 1..5) {
-        for( o in 1..5) {
-            if(n == 1 && o == 3) break@loop
-            println("n : $n, o : $o")
+    // 다중 반복문에서 break, continue 사용 -> label로 지정
+    // 외부 반복문에 레이블명@for
+    // break/continue문에 break/continue@레이블명
+    // -> 레이블이 달린 반복문 기준으로 즉시 break/continue
+    loop@for (p in 1..5) {
+        for( q in 1..5) {
+            if(p == 1 && q == 3) break@loop
+            println("p : $p, q : $q")
         }
     }
 
