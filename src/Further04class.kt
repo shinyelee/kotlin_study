@@ -13,6 +13,10 @@ fun main() {
     var txt = Singer("연준", 1999)
     var aespa = Singer("윈터", 2001)
     var nmixx = Singer("설윤", 2004)
+//    안녕하세요, 1997년생 정국입니다.
+//    안녕하세요, 1999년생 연준입니다.
+//    안녕하세요, 2001년생 윈터입니다.
+//    안녕하세요, 2004년생 설윤입니다.
 
 //    println("안녕하세요, ${bts.birthYear}년생 ${bts.name}입니다.")
     // 너무 번거로움 -> 아예 클래스 내에 함수로 넣어주면 됨
@@ -23,9 +27,13 @@ fun main() {
 //    nmixx.introduce()
     // class내에 println function 추가 -> 코드가 훨씬 짧아짐
 
+    // 보조생성자 -> 자동으로 1997년생 됨
     var astro = Singer("은우")
     var twice = Singer("지효")
-    // 보조생성자 -> 자동으로 1997년생 됨
+//    안녕하세요, 1997년생 은우입니다.
+//    보조생성자가 사용되었습니다.
+//    안녕하세요, 1997년생 지효입니다.
+//    보조생성자가 사용되었습니다.
 
 }
 
@@ -60,6 +68,6 @@ class Singer (var name: String, val birthYear: Int)
     constructor(name: String) : this(name, 1997) {
         // 보조 생성자를 만들 때는 반드시 기본 생성자를 통해 속성을 초기화 해줘야 함
         // : this 쓴 후 기본 생성자가 필요로 하는 파라미터를 ()안에 넣어주면 됨
-        println("보조생성자가 사용되었습니다")
+        println("보조생성자가 사용되었습니다.")
     }
 }
