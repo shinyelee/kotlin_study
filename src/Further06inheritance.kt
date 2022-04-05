@@ -6,12 +6,14 @@ fun main() {
     var a = Animal("휴지", 5, "강아지")
     var b = Dog("휴지", 5)
 
-    // Animal 클래스로부터 "개" 속성을 상속받기 때문에 결과적으로는 a와 b의 속성이 똑같음
+    // Animal 클래스로부터 "강아지" 속성을 상속받음
+    // -> b에서 "강아지" 생략해도 a와 b의 속성이 똑같음
     a.introduce()
     b.introduce()
 
     // bark는 Dog 클래스에만 해당함
 //    a.bark()
+//    Kotlin: Unresolved reference: bark
     b.bark()
 
     var c = Cat("감쟈", 1)
@@ -31,7 +33,6 @@ open class Animal (var name: String, var age: Int, var type: String)
         println("저는 ${type} ${name}이고, ${age}살 입니다.")
     }
 }
-
 
 // 상속 규칙 //
 // 1. 서브 클래스는 수퍼 클래스에 존재하는 속성과 같은 이름의 속성을 가질 수 없음
