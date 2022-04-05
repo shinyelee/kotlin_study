@@ -1,7 +1,22 @@
-// Lambda Function(람다 함수)
+// Lambda Function(람다 함수) //
+
 // 고차함수 그잡채 -> 별도의 연산자 없이 변수에 담을 수 있음
+// Lambda Expression(람다식), Anonymous Function(익명 함수)라고도 한다.
 
 fun main() {
+
+    // 이름이 없는 함수
+    var result: Int
+
+    // 일반 변수에 람다식 할당
+    val multi = {x: Int, y: Int -> x * y}
+
+    // 람다식이 할당된 변수는 함수처럼 사용 가능
+    result = multi(10, 20)
+    println(result)
+//    200
+
+
 
     bb(::aa)
 //    bb가 호출한 함수 aa
