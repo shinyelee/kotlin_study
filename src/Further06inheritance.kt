@@ -1,4 +1,4 @@
-// Inheritance(상속)
+// Inheritance(상속) //
 // 자식 클래스가 부모 클래스의 멤버를 물려받음
 
 fun main() {
@@ -23,7 +23,7 @@ fun main() {
 
 }
 
-// Super Class(수퍼/부모 클래스)
+// Super Class(수퍼/부모 클래스) //
 // 물려주는 쪽
 // class 앞에 open 붙여줘야 상속 가능
 open class Animal (var name: String, var age: Int, var type: String)
@@ -39,7 +39,7 @@ open class Animal (var name: String, var age: Int, var type: String)
 // -> var, val 등을 붙이면 클래스 자체 속성으로 선언되기 때문에 일반 파라미터로 받아야 함
 // 2. 서브 클래스가 생성될 때 수퍼 클래스의 생성자가 호출되어야 함
 
-// Sub Class(서브/자식 클래스)
+// Sub Class(서브/자식 클래스) //
 // 물려받는 쪽
 class Dog (name: String, age: Int) : Animal (name, age, "강아지")
 {
