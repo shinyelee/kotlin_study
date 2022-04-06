@@ -11,19 +11,19 @@ fun main() {
 
     // 오브젝트는 인스턴스를 생성하지 않음
     // -> 오브젝트명.멤버명 형태로 사용
-    println(Counter.count)
+    println(Counting.count)
 //    0
 
-    Counter.countUp()
-    println(Counter.count)
+    Counting.countUp()
+    println(Counting.count)
 //    1
 
-    Counter.countUp()
-    println(Counter.count)
+    Counting.countUp()
+    println(Counting.count)
 //    2
 
-    Counter.clear()
-    println(Counter.count)
+    Counting.clear()
+    println(Counting.count)
 //    0
 
     // 오브젝트로 선언된 객체는 최초 사용시 자동으로 생성됨
@@ -60,7 +60,7 @@ fun main() {
 }
 
 // 오브젝트는 객체 그잡채 -> 생성자 사용하지 않음
-object Counter {
+object Counting {
 
     var count = 0
 
