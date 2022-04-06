@@ -52,7 +52,7 @@ class EventPrinter {
 
     fun start() {
 
-        // 파라미터에 익명 객체 만들어 넘김 -> Event Listener 상속
+        // 파라미터에 익명 객체 만들어 넘김 -> EventListener 상속
         val counter = Counter(object: EventListener {
 
             override fun onEvent(count: Int) {
