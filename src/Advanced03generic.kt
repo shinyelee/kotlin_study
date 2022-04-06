@@ -1,59 +1,53 @@
-// Generic(제네릭)
-// 컴파일시 타입 체크 가능
-// 타입캐스팅 노필요
+// Generic(제너릭) //
+
+// 함수나 클래스를 선언할 때 고정적인 자료형 대신
+// 실제 자료형으로 대체되는 타입 파라미터를 받아 사용하는 방법
+
+// 타입 파라미터는 관례적으로 <T> 사용
+// (여럿일 경우 T, U, V 등 알파벳 사용)
+
+// 제너릭을 특정한 수퍼 클래스를 상속받은 클래스 타입으로만 제한하려면
+// <T: SuperClass> 라고 쓰면 됨
 
 fun main() {
 
-    val box1 = Box1(10)
-    println(box1.value)
+    UsingGeneric(S()).doSing()
+    UsingGeneric(Y()).doSing()
+//    시은이가 노래를 합니다
+//    자윤이가 노래를 합니다
 
-    val box2 = Box2("문자 10")
-    println(box2.value)
+    doSing(Y())
+    doSing(I())
+//    자윤이가 노래를 합니다
+//    아이사가 노래를 합니다
 
-    // 문자 10을 box1에 넣으려면 원래는 이렇게 해야함
-    val box1_1 = Box1("10".toInt())
-    println(box1_1.value)
-
-    val box3 = Box3(10)
-    println(box3.value)
-
-    val box4 = Box3("10")
-    println(box4.value)
-
-    // 문자 123은 ㄱㅊ 숫자 123은 에러남
-//    testFun1("123")
-//    testFun1(123)
-
-    // 둘 다 문제없이 출력됨됨
-    testFun2("123")
-    testFun2(123)
-    
-    // 꼭 T가 아니라 다른 알파벳이어도 ㄱㅊ
-    testFun3("123")
-    testFun3(123)
 }
 
-fun testFun1(a : String) {
-    println(a)
+fun <T: S> doSing(t: T) {
+    t.sing()
 }
 
-fun <T> testFun2(a : T) {
-    println(a)
+// 수퍼 클래스
+open class S {
+    open fun sing() {
+        println("시은이가 노래를 합니다")
+    }
 }
 
-fun <A> testFun3(a : A) {
-    println(a)
+class Y : S() {
+    override fun sing() {
+        println("자윤이가 노래를 합니다")
+    }
 }
 
-class Box1(test : Int) {
-    val value = test
+class I : S() {
+    override fun sing() {
+        println("아이사가 노래를 합니다")
+    }
 }
 
-class Box2(test : String) {
-    var value = test
-}
-
-// Generic
-class Box3<T>(test : T) {
-    var value = test
+class UsingGeneric<T: S> (val t: T) {
+    fun doSing() {
+        t.sing()
+    }
 }
