@@ -42,20 +42,45 @@ class Counter(var listener: EventListener) {
 
 }
 
-// 이벤트 수신 -> 화면에 출력
-class EventPrinter: EventListener {
+// Anonymous Object(익명 객체) //
+// EventPrinter가 EventListener를 상속받아 구현하지 않고
+// 임시로 만든 별도의 EventListener 객체를 대신 넘겨줌
+// -> 이름이 없는 객체 -> 익명 객체
 
-    // EventListener 상속 -> 구현
-    override fun onEvent(count: Int) {
-        print("${count}-")
-    }
+// 클래스에서 EventListener 상속 안 받음
+class EventPrinter {
 
-    // Counter의 인스턴스 만듦 -> this로 EventListener 구현부 넘겨줌(객체지향의 다형성)
     fun start() {
-        // this -> EventPrinter 객체 자신
-        val counter = Counter(this)
-        // counter 시작
+
+        // 파라미터에 익명 객체 만들어 넘김 -> Event Listener 상속
+        val counter = Counter(object: EventListener {
+
+            override fun onEvent(count: Int) {
+                print("${count}-")
+            }
+
+        })
         counter.count()
+
     }
 
 }
+// 인터페이스를 구현한 객체를 코드 중간에도 즉시 생성하여 사용 가능
+
+// 이벤트 수신 -> 화면에 출력
+//class EventPrinter: EventListener {
+//
+//    // EventListener 상속 -> 구현
+//    override fun onEvent(count: Int) {
+//        print("${count}-")
+//    }
+//
+//    // Counter의 인스턴스 만듦 -> this로 EventListener 구현부 넘겨줌(객체지향의 다형성)
+//    fun start() {
+//        // this -> EventPrinter 객체 자신
+//        val counter = Counter(this)
+//        // counter 시작
+//        counter.count()
+//    }
+//
+//}
