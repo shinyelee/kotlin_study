@@ -1,66 +1,46 @@
-// Object => 싱글톤패턴(디자인 패턴 중 하나)
-// 디자인패턴 => 코드르 ㄹ어떻게 짜는게 더 좋고, 어떤 방식으로 구성해야 유지보수가 쉬운가
-// 객체를 한 개만 생성하도록 함
-// 전역으로 생성 가능
+// Object(오브젝트) //
+// 객체를 한 개만 생성하도록 하며 전역으로 생성 가능
+// 하나의 객체로 공통적인 속성과 함수를 사용해야 할 때 -> 클래스보다 오브젝트가 나음
+// 싱글톤 패턴을 언어 차원에서 지원하는 것
+
+// Singleton Pattern(싱글톤 패턴) //
+// 디자인 패턴(코드를 어떻게 짜는게 더 좋고, 어떤 방식으로 구성해야 유지보수가 쉬운가) 중 하나
+// 클래스의 인스턴스를 단 하나만 만들어 사용하도록 하는 코딩 아키텍쳐 패턴
 
 fun main() {
 
-    // testClass가 2번 출력됨
-    val test1 = TestClass()
-    val test2 = TestClass()
+    // 오브젝트는 인스턴스를 생성하지 않음
+    // -> 오브젝트명.멤버명 형태로 사용
+    println(Counter.count)
+//    0
 
-    test1.count = 10
+    Counter.countUp()
+    println(Counter.count)
+//    1
 
-    // Object는 객체를 한 번만 생성하기 때문에
-    println(test1.count) // 얘는 10
-    println(test2.count) // 얘는 0이 된다
+    Counter.countUp()
+    println(Counter.count)
+//    2
 
-    // 객체를 한 번만 생성하기 때문에
-    // testObject가 1번만 출력됨
-    val test3 = testObject
-    val test4 = testObject
+    Counter.clear()
+    println(Counter.count)
+//    0
 
-    test3.count = 10
-
-    println(test3.count)
-    println(test4.count)
-
-    val test5 = TestObjectClass()
-    val test6 = TestObjectClass()
-
-    test5.plusBtn()
-    println(TestObjectClass.number)
-    test5.plusBtn()
-    println(TestObjectClass.number)
-    test5.plusBtn()
-    println(TestObjectClass.number)
-    test6.minusBtn()
-    println(TestObjectClass.number)
+    // 오브젝트로 선언된 객체는 최초 사용시 자동으로 생성됨
+    // -> 이후에는 코드 전체에서 공용으로 사용할 수 있음
 
 }
 
-class TestObjectClass {
-    companion object {
-        var number = 0
-    }
-    fun plusBtn() {
-        number++
-    }
-    fun minusBtn() {
-        number--
-    }
-}
+// 오브젝트는 객체 그잡채 -> 생성자 사용하지 않음
+object Counter {
 
-object testObject {
-    init {
-        println("testObject")
-    }
     var count = 0
-}
 
-class TestClass() {
-    init {
-        println("testClass")
+    fun countUp() {
+        count++
     }
-    var count = 0
+
+    fun clear() {
+        count = 0
+    }
 }
