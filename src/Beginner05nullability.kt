@@ -1,6 +1,56 @@
-// Nullability(널 가능성)
+// Nullability(널 가능성) //
+
+// null pointer exception 방지위해 if문으로 매번 조건 체크 -> 번거로움
+// -> 연산자 사용
+
+// Null-Safe Operator //
+// ?.
+// 참조 연산자를 실행하기 전에 먼저 객체가 null인지 확인
+// -> 객체가 null이면 ?. 뒤에 따라오는 구문을 실행하지 않음
+
+// Elvis Operator //
+// ?:
+// 객체가 null이 아니라면 그대로 사용
+// -> null이면 ?: 뒤에 따라오는 객체로 대체
+
+// Non-Null Assertion Operator //
+// !!.
+// 참조 연산자를 사용할 때 null 여부를 컴파일시 확인하지 않음
+// -> 런타임시 null pointer exception이 나도록 의도적으로 방치
 
 fun main() {
+
+    var a: String? = null
+
+    // null이므로 대문자 적용 안 함
+    println(a?.toUpperCase())
+//    null
+
+    // null이므로 default로 대체 후 대문자 적용
+    println(a?:"default".toUpperCase())
+//    DEFAULT
+
+// null pointer exception 발생
+//    println(a!!.toUpperCase())
+//    Exception in thread "main" java.lang.NullPointerException
+
+    // null을 체크하기 위해 스코프 함수를 if문 대신 사용
+    a?.run {
+        println(toUpperCase())
+        println(toLowerCase())
+    }
+    // null이므로 실행 안 됨
+
+    var b : String? = "Kotlin"
+
+    b?.run {
+        println(toUpperCase())
+        println(toLowerCase())
+    }
+//    KOTLIN
+//    kotlin
+
+
 
 //    val x: Int = null
 //    Kotlin: Null can not be a value of a non-null type Int
