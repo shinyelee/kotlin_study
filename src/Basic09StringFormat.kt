@@ -73,6 +73,56 @@ fun main() {
 
 
 
+    val nullString: String? = null // null
+    val emptyString = "" // 아무것도 없음
+    val blankString = " " // 공백 문자열
+    val normalString = "A" // 일반 문자열
+
+    // null 또는 아무것도 없는 문자열인지 확인
+    println(nullString.isNullOrEmpty())
+    println(emptyString.isNullOrEmpty())
+    println(blankString.isNullOrEmpty())
+    println(normalString.isNullOrEmpty())
+//    true
+//    true
+//    false
+//    false
+
+    // null 또는 공백 문자열(스페이스, 탭 등)인지 확인
+    println(nullString.isNullOrBlank())
+    println(emptyString.isNullOrBlank())
+    println(blankString.isNullOrBlank())
+    println(normalString.isNullOrBlank())
+//    true
+//    true
+//    true
+//    false
+
+
+
+    var kt = "kotlin.kt"
+    var java = "java.java"
+
+    // java로 시작하는 문자열
+    println(kt.startsWith("java"))
+    println(java.startsWith("java"))
+//    false
+//    true
+
+    // kt로 끝나는 문자열
+    println(kt.endsWith(".kt"))
+    println(java.endsWith(".kt"))
+//    true
+//    false
+
+    // lin을 포함하는 문자열
+    println(kt.contains("lin"))
+    println(java.contains("lin"))
+//    true
+//    false
+
+
+
     // 문제
     val testList = ArrayList<String>()
     testList.add("abc1@naver.com")
