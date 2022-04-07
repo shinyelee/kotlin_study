@@ -1,4 +1,4 @@
-// function
+// function(함수) //
 
 fun main() {
 
