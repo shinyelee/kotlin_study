@@ -34,6 +34,12 @@ fun main() {
 
 
     sum(1, 2, 3, 4)
+    println()
+
+
+
+    println(6 multiply 4)
+    println(6.multiply(4))
 
 
 
@@ -79,6 +85,13 @@ fun sum(vararg numbers: Int) {
     print(sum)
 
 }
+
+
+
+// Infix Function(중위 함수) //
+// 중위 표기법 함수라고도 함
+// 이름 그대로 두 변수 중간에 위치하는 함수
+infix fun Int.multiply(a: Int): Int = this * a
 
 
 
