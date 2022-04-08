@@ -37,8 +37,8 @@ class Test4 {
     class Test4NestedClass {
         fun testFun4() {
             println("TestFun4")
-            // Kotlin: Unresolved reference: tempText1
             // println(tempText1)
+            // Kotlin: Unresolved reference: tempText1
         }
     }
 }
