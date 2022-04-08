@@ -34,12 +34,15 @@ fun main() {
 
 
     sum(1, 2, 3, 4)
+//    10
     println()
 
 
 
     println(6 multiply 4)
     println(6.multiply(4))
+//    24
+//    24
 
 
 
@@ -49,6 +52,9 @@ fun main() {
     c.sumNumber(1, 2)
     c.sumNumber(1, 2, 3)
     c.sumNumber("나는 ", "행복합니다")
+//    3
+//    6
+//    나는 행복합니다
 
 }
 
