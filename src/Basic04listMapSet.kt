@@ -50,6 +50,10 @@ fun main () {
     val findIndex = mutableList1.indexOf(10)
     println(findIndex)
     println(mutableList2[findIndex])
+//    1
+//    철수
+
+
 
     // 인덱스는 겁나 귀찮음 -> map 사용
     val testMap1 = mutableMapOf<Int, String>()
@@ -59,19 +63,63 @@ fun main () {
     testMap1.put(22, "훈이")
 
     println(testMap1[15])
+//    짱구
 
-    // set -> 중복을 막아줌
+
+
+    // Set //
+
+    // 리스트와 달리 순서가 정렬되지 않으며 중복이 허용되지 않는 컬렉션
+    // 인덱스로 위치 지정해 객체 참조하기 불가능
+    // contains로 객체가 set 안에 존재하는지를 확인하는 식으로만 사용
+
     val testSet1 = mutableSetOf("a", "b", "c")
+
     println(testSet1)
+//    [a, b, c]
+
+    // add로 데이터 추가
     testSet1.add("d")
     testSet1.add("e")
+
     println(testSet1)
+//    [a, b, c, d, e]
+
+    // 중복을 자동으로 거르기 때문에 e는 한 번만 추가됨
     testSet1.add("e")
     testSet1.add("e")
     testSet1.add("e")
+
     println(testSet1)
+//    [a, b, c, d, e]
+
+    // remove로 데이터 삭제
     testSet1.remove("e")
+
     println(testSet1)
+//    [a, b, c, d]
+
+
+
+    val a = mutableSetOf("귤", "바나나", "키위")
+
+    for (item in a) {
+        println("${item}")
+    }
+//    귤
+//    바나나
+//    키위
+
+    a.add("자몽")
+    println(a)
+//    [귤, 바나나, 키위, 자몽]
+
+    a.remove("바나나")
+    println(a)
+//    [귤, 키위, 자몽]
+
+    println(a.contains("귤"))
+//    true
 
 }
 
