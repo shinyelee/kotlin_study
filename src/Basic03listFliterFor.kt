@@ -21,6 +21,8 @@ fun main() {
     testList3.add("d")
     println(testList3)
 
+
+
     // 필터
     val testList4 = listOf("student1","student2","student3","student4","teacher1","student5")
     println(testList4)
