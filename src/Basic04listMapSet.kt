@@ -55,8 +55,16 @@ fun main () {
 
 
 
+    // Map //
+
+    // 객체를 넣을 때 그 객체(value)를 찾아낼 수 있는 key(객체를 찾기 위한 값)를 쌍으로 넣어주는 컬렉션
+    // 객체의 위치가 아닌 고유한 키를 통해 객체를 참조한다는 특징을 가짐
+    // 같은 키에 다른 객체를 넣음 -> 기존 객체가 대체됨
+    // put으로 데이터 추가, remove로 데이터 삭제
     // 인덱스는 겁나 귀찮음 -> map 사용
+
     val testMap1 = mutableMapOf<Int, String>()
+
     testMap1.put(5, "유리")
     testMap1.put(10, "철수")
     testMap1.put(15, "짱구")
@@ -64,6 +72,30 @@ fun main () {
 
     println(testMap1[15])
 //    짱구
+
+
+
+    val b = mutableMapOf("아이브" to "LOVE DIVE",
+                         "아이들" to "TOMBOY",
+                         "아이유" to "GANADARA")
+
+    for (entry in b) {
+        println("${entry.key} : ${entry.value}")
+    }
+//    아이브 : LOVE DIVE
+//    아이들 : TOMBOY
+//    아이유 : GANADARA
+
+    b.put("레드벨벳", "Feel My Rhythm")
+    println(b)
+//    {아이브=LOVE DIVE, 아이들=TOMBOY, 아이유=GANADARA, 레드벨벳=Feel My Rhythm}
+
+    b.remove("아이유")
+    println(b)
+//    {아이브=LOVE DIVE, 아이들=TOMBOY, 레드벨벳=Feel My Rhythm}
+
+    println(b["레드벨벳"])
+//    Feel My Rhythm
 
 
 
