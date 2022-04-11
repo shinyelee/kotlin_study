@@ -113,6 +113,7 @@ fun main() {
 //    false
 //    c
 //    b
+// true
 //    a
 
     while (testIterator.hasNext()) {
