@@ -25,7 +25,7 @@ fun main() {
     //    deliveryItem("선물",  "친구집")
 //    Kotlin: Type mismatch: inferred type is String but Int was expected
 
-    // Named Arguments //
+    // Named Argument(지명 인자) //
     // 파라미터의 순서와 관련없이 파라미터의 이름을 사용해 직접 파라미터 값 할당
     // -> count 생략해도 정상적으로 실행됨
     deliveryItem("선물",  destination = "친구집")
@@ -34,8 +34,8 @@ fun main() {
 
 
     sum(1, 2, 3, 4)
-//    10
     println()
+//        10
 
 
 
@@ -70,7 +70,7 @@ fun deliveryItem(name: String, count: Int = 2, destination: String = "집") {
 
 
 
-// Variable Number Of Arguments //
+// Variable Number Of Arguments(가변 인자) //
 // vararg
 // 같은 자료형을 개수에 상관없이 파라미터로 받고 싶을 때 사용
 // 개수가 지정되지 않은 파라미터 -> 다른 파라미터와 혼용시 맨 마지막에 표기
