@@ -20,6 +20,23 @@
 
 fun main() {
 
+    // 그냥 공백(null 아님)
+    val test13 = ""
+    println(test13)
+
+    // null <- 대충 슈뢰딩거의 값(undefined, 0, ""와는 다름)
+    val test14 = null
+    println(test14)
+
+    // null은 문자열이 아니기 때문에 -> 에러 발생
+//    val test15 : String = null
+    // Kotlin: Null can not be a value of a non-null type String
+
+    // test16은 String 또는 null이다
+    val test16 : String? = null
+
+
+    // 자료형 뒤에 ? 붙여서 nullable 변수로 선언
     var a: String? = null
 
     // null이므로 대문자 적용 안 함

@@ -114,19 +114,4 @@ fun main(){
     // toChar()
     // toString()
 
-
-
-    // 그냥 공백
-    val test13 = ""
-    println(test13)
-    // null <- 대충 슈뢰딩거의 값(undefined, 0, ""와는 다름)
-    val test14 = null
-    println(test14)
-
-    // null은 문자열이 아니기 때문에 -> 에러 발생
-    // Kotlin: Null can not be a value of a non-null type String
-//    val test15 : String = null
-    // test16은 String 또는 null이다
-    val test16 : String? = null
-
 }
