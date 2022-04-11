@@ -27,15 +27,21 @@ fun main() {
     val testList4 = listOf("student1","student2","student3","student4","teacher1","student5")
     println(testList4)
     println(testList4.filter { it.startsWith("s") })
+//    [student1, student2, student3, student4, teacher1, student5]
+//    [student1, student2, student3, student4, student5]
 
     // 리스트에 null 있을 때
     val testList5 = listOf("student1","student2","student3","student4","teacher1","student5",null)
     println(testList5)
-    // 잘못된 필터링
-    // Kotlin: Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
+//    [student1, student2, student3, student4, teacher1, student5, null]
+
+    // 잘못된 필터링(null 포함)
 //    println(testList5.filter { it.startsWith("s") })
+    // Kotlin: Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
+
     // 올바른 필터링(null 제외)
     println(testList5.filterNotNull().filter { it.startsWith("s") })
+//    [student1, student2, student3, student4, student5]
 
     // test1에 test2의 값을 넣음 -> "a"가 "b"로 바뀜
     var test1 : String = "a"
