@@ -91,7 +91,7 @@ fun main() {
 
 
 
-    // iterator //
+    // Iterator(반복자) //
 
     val testList2 = mutableListOf("a", "b", "c")
 
@@ -104,6 +104,7 @@ fun main() {
     println(testIterator.hasNext()) // c 다음 -> 없음 -> false
     println(testIterator.previous()) // false 이전 -> c
     println(testIterator.previous()) // c 이전 -> b
+    println(testIterator.hasPrevious()) // b 이전 -> a -> true
     println(testIterator.previous()) // b 이전 -> a
 //    a
 //    b
@@ -117,6 +118,9 @@ fun main() {
     while (testIterator.hasNext()) {
         println(testIterator.next())
     }
+//    a
+//    b
+//    c
 
 
 
@@ -152,7 +156,15 @@ fun main() {
         }
 
     }
+//    지민
+//    원영
+//    채현
+//    수빈
+//    연준
+//    주연
+
     // 리스트 출력
     println(testList)
+//    [지민, 원영, 채현, 수빈, 연준, 주연]
 
 }
