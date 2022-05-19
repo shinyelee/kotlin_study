@@ -37,4 +37,20 @@ fun main () {
     println(releaseString)
 //    Kotlin was released in July 2011
 
+    val firstName = "shinye"
+    val lastName = "lee"
+    // 이런 식으로도 결합 가능
+    println("I'm ${firstName + lastName}")
+//    I'm shinyelee
+
+    // 문자열에 $을 쓰고 싶을 때(not변수)
+    // \$을 입력하면 $으로 출력됨
+    println("LO\$ER=LO♡ER")
+
+    // 주석은 보통 이렇게 씀
+
+    /* 여러 줄
+    *  주석은
+    *  이렇게도 씀 */
+
 }
