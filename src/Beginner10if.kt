@@ -37,3 +37,14 @@ fun main() {
 //    true
 
 }
+
+fun aorb(a : Int, b : Int) : Int {
+    if(a > b) {
+        return a
+    } else {
+        return b
+    }
+}
+// 코틀린은 3항연산자가 없기 때문에 아래와 같이 표현함
+fun aorb2(a : Int, b : Int) = if(a > b) a else b
+// 코틀린은 자동으로 타입을 추론 -> (a : Int, b : Int) 뒤에 : Int 생략됨
