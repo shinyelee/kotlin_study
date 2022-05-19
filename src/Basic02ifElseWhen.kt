@@ -94,7 +94,7 @@ fun main() {
     // 등호, 부등호 사용 불가
     // 여러 조건에 부합해도 제일 처음 만족하는 구간에서 실행 종료
 
-    var score1 = 80
+    var score1 = 90
 
     when(score1) {
         100 -> {
@@ -103,14 +103,39 @@ fun main() {
         90 -> {
             println("90")
         }
-        80 -> {
-            println("80")
+        // 복수로 조건 걸기 가능
+        80,70 -> {
+            println("80 or 70")
         }
         else -> {
             println("no")
         }
     }
-//    80
+//    90
+
+
+
+    var score3 = 78
+
+    when(score3) {
+        100 -> {
+            println("Perfect!")
+        }
+        // 범위 설정 가능
+        in 90..99 -> {
+            println("Great!")
+        }
+        in 80..89 -> {
+            println("Good!")
+        }
+        in 70..79 -> {
+            println("Ok!")
+        }
+        else -> {
+            println("Well...")
+        }
+    }
+//    OK!
 
 
 
@@ -142,6 +167,7 @@ fun main() {
 //        "shinyelee" -> println("my name")
 //        is Long -> println("long type"
 //        !is String -> println("not string")
+//        // else 생략 가능
 //        else -> println("else")
 //    }
 //}
@@ -153,6 +179,7 @@ fun doWhen (a: Any) {
         "shinyelee" -> "my name"
         is Long -> "long type"
         !is String -> "not string"
+        // else 생략 불가
         else -> "else"
     }
     println(result)
