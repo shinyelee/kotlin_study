@@ -31,19 +31,23 @@ fun main() {
     // 일반적인 변수
     // 언제든지 읽기/쓰기 가능
     // 변수명 앞에 var 붙임
+    // variable -> var
 
     var greeting4 = "Hello World!"
+    // 재정의 가능
     greeting4 = "Hello Kotlin!"
 
 
 
-    // Immutable Variable(가변 변수) //
+    // Immutable Variable(불변 변수) //
 
     // 선언시에만 초기화
     // 읽기만 가능(중간에 값 변경 불가)
     // 변수명 앞에 val 붙임
+    // value -> val
 
     val greeting5 = "Hello World!"
+    // 재정의 불가능
 //    greeting5 = "Hello Kotlin!"
 //    Kotlin: Val cannot be reassigned
 
