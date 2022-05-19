@@ -158,7 +158,11 @@ fun main() {
 
 }
 
-// Any 자료형은 나중에 재등장
+
+
+// Expression VS Statement
+// 코틀린의 모든 함수는 expression
+// 자바는 반대로 statement
 
 // 조건문.ver
 //fun doWhen (a: Any) {
@@ -184,3 +188,5 @@ fun doWhen (a: Any) {
     }
     println(result)
 }
+
+// Any 자료형은 나중에 재등장
