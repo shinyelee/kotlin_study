@@ -113,7 +113,17 @@ fun main() {
 
     // for //
 
-    // 11 .. 19 -> 11부터 19까지 i값 1씩 증가
+    // 1부터 10까지 더하기
+    var sum : Int = 0
+    for(i in 1..10) {
+//        sum = sum+ i
+//        과 동일
+        sum += i
+    }
+    println(sum)
+//    55
+
+    // 11 .. 15 -> 11부터 15까지(포함) i값 1씩 증가
     for(i in 11 .. 15) {
         // 관습적으로 i로 씀 -> 다른 알파벳이어도 노상관
         println(i)
@@ -124,38 +134,72 @@ fun main() {
 //    14
 //    15
 
-    // 19 downTo 11 -> 19부터 11까지 j값 1씩 감소
-    for(j in 15 downTo 11) {
+    // 21 .. 25 -> 21부터 25'미만'까지 i값 1씩 증가
+    for(i in 21 until 25) {
+        // 관습적으로 i로 씀 -> 다른 알파벳이어도 노상관
+        println(i)
+    }
+//    21
+//    22
+//    23
+//    24
+
+    // 35 downTo 31 -> 35부터 31까지 j값 1씩 감소
+    for(j in 35 downTo 31) {
         println(j)
     }
-//    15
-//    14
-//    13
-//    12
-//    11
+//    35
+//    34
+//    33
+//    32
+//    31
 
     // step 3 -> k값 3씩 증가
-    for (k in 11..19 step 3) {
+    for (k in 41..49 step 3) {
         println(k)
     }
-//    11
-//    14 <- 11+3
-//    17 <- 14+3
+//    41
+//    44 <- 41+3
+//    47 <- 44+3
 
     // step 2 -> l값 2씩 감소
-    for (l in 19 downTo 11 step 2) {
+    for (l in 59 downTo 51 step 2) {
         println(l)
     }
-//    19
-//    17 <- 19-2
-//    15 <- 17-2
-//    13 <- 15-2
-//    11 <- 13-2
+//    59
+//    57 <- 59-2
+//    55 <- 57-2
+//    53 <- 55-2
+//    51 <- 53-2
 
     // 문자열도 가능
     for (m in 'a'..'e') {
         println(m)
     }
+//    a
+//    b
+//    c
+//    d
+//    e
+
+    // 배열이나 리스트도 가능
+    val blackPink = arrayListOf("Jennie", "Rosé", "Jisoo", "Lisa")
+    for(member in blackPink) {
+        println("${member} ")
+    }
+//    Jennie
+//    Rosé
+//    Jisoo
+//    Lisa
+
+    // 인덱스도 함께 출력 가능
+    for((index, member) in blackPink.withIndex()) {
+        println("${index + 1}번째 멤버 ${member}")
+    }
+//    1번째 멤버 Jennie
+//    2번째 멤버 Rosé
+//    3번째 멤버 Jisoo
+//    4번째 멤버 Lisa
 
 
 
@@ -166,36 +210,36 @@ fun main() {
 
     // break //
     // 반복문 종료 -> 다음 구문으로 넘어감
-    for (n in 11..20) {
-        if(n == 13) break
-        // n == 11 -> 11 출력
-        // n == 12 -> 12 출력
-        // n == 13 -> 종료
+    for (n in 61..70) {
+        if(n == 63) break
+        // n == 61 -> 11 출력
+        // n == 62 -> 12 출력
+        // n == 63 -> 종료
         println(n)
     }
-    // 11
-    // 12
+    // 61
+    // 62
 
 
 
     // continue //
     // 다음 반복 조건으로 넘어감
-    for (o in 11..20) {
-        if(o == 13) continue
-        // o == 11 -> 11 출력
-        // o == 12 -> 12 출력
-        // o == 13 -> 14로 넘어감
+    for (o in 71..80) {
+        if(o == 73) continue
+        // o == 71 -> 71 출력
+        // o == 72 -> 72 출력
+        // o == 73 -> 74로 넘어감
         println(o)
     }
-//    11
-//    12
-//    14
-//    15
-//    16
-//    17
-//    18
-//    19
-//    20
+//    71
+//    72
+//    74
+//    75
+//    76
+//    77
+//    78
+//    79
+//    80
 
     // 다중 반복문에서 break, continue 사용 -> label로 지정
     // 외부 반복문에 레이블명@for
