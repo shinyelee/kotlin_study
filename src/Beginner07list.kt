@@ -8,6 +8,9 @@ fun main() {
     // List //
     // 생성시에 넣은 객체 대체/추가/삭제 불가능
 
+//    val a : List<String> = listOf("사과", "딸기", "배")
+    // 코틀린은 알아서 타입추론하기 때문에
+    // : List<String> 즉 자료형 부분 생략 가능
     val a = listOf("사과", "딸기", "배")
     println(a[1])
 
@@ -16,10 +19,34 @@ fun main() {
     }
     println()
 
+    // : List<Any>일 경우 자료형 아무거나 다 넣을 수 있음
+//    val anyList : List<Any> = listOf(4,"b",5L)
+    // 자료형 생략
+    val anyList = listOf(4,"b",5L)
+
+    // 리스트는 배열과 달리 인터페이스
+    // 객체 가져올 순 있어도 그 값을 직접 바꾸는 것은 불가능
+    var result = a.get(0)
+
 
 
     // Mutable List //
     // 생성시에 넣은 객체 대체/추가/삭제 가능
+
+    // arrayList 초기화
+//    val arrList : ArrayList<Int> = arrayListOf<Int>()
+    // 자료형 생략
+    val arrList = arrayListOf<Int>()
+
+    // var 아니고 val인 이유?
+    // -> 객체 대체/추가/삭제 (O)
+    // -> 리스트 자체를 재정의 (X)
+    arrList.add(10)
+    arrList.add(20)
+//    arrList = arrayListOf()
+//    Kotlin: Val cannot be reassigned
+
+
 
     val b = mutableListOf(6, 3, 1)
     println(b)
