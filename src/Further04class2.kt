@@ -1,4 +1,4 @@
-// 상속 보충설명 (4)
+// 상속 보충설명 (5)
 
 fun main() {
 
@@ -8,6 +8,7 @@ fun main() {
     korean.singASong()
 //    상속 전 : lalala
 //    상속 후 : 라라라
+//    I'm anonymous
 
 }
 
@@ -34,11 +35,15 @@ open class Human(val name : String = "anonymous") {
 class Korean : Human() {
 
     override fun singASong() {
-        // 상속 전 메서드와 상속 후 메서드를 모두 쓰고 싶다면
-        // super.메서드명
-        // 형태로 활용하면 됨
+
         super.singASong()
         println("상속 후 : 라라라")
+        // 상속 받았기 때문에 Human 클래스의 매개변수(파라미터)를 받아옴
+        // name 기본값이 "anonymous"이므로
+        // I'm anonymous
+        // 를 출력함
+        println("I'm ${name}")
+
     }
 
 }
