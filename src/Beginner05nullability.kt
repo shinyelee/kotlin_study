@@ -36,6 +36,7 @@ fun main() {
     val test16 : String? = null
 
 
+
     // 자료형 뒤에 ? 붙여서 nullable 변수로 선언
     var a: String? = null
 

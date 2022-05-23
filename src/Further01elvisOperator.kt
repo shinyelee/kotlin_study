@@ -1,10 +1,3 @@
-// Elvis Operator(엘비스 연산자) //
-// null 처리를 위해 사용
-// val str = ""
-// 이나
-// val number = 0
-// 과는 다르다
-
 fun main() {
 
 //    var testStr1 : String = ""
@@ -48,3 +41,11 @@ fun findStringLength3(str : String?) : Int {
 fun findStringLength4(str : String?) : Int? {
     return str?.length ?: 0
 }
+
+// Elvis Operator(엘비스 연산자) //
+
+// null 처리를 위해 사용
+// val str = ""
+// 이나
+// val number = 0
+// 과는 다르다
