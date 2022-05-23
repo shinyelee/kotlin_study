@@ -1,12 +1,12 @@
-// 생성자 보충설명 (3)
+// 생성자 보충설명 (4)
 
 fun main() {
 
     val human = Human("shinyelee")
+//    인스턴스 생성할 때 함께 실행됨
 
-    // ()안에 name 안 넣어도 컴파일 오류가 나지 않음
-    // -> 기본값을 anonymous로 설정했기 때문
     val who = Human()
+//    인스턴스 생성할 때 함께 실행됨
 
     human.eatingCake()
 //    yummy!
@@ -16,8 +16,11 @@ fun main() {
 
 }
 
-// 디폴트값 부여함
 class Human(val name : String = "anonymous") {
+
+    init {
+        println("인스턴스 생성할 때 함께 실행됨")
+    }
 
     fun eatingCake() {
         println("yummy!")
