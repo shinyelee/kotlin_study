@@ -1,4 +1,4 @@
-// 생성자 보충설명 (1)
+// 생성자 보충설명 (2)
 
 fun main() {
 
@@ -12,20 +12,10 @@ fun main() {
 
 }
 
-// 생성자가 없는 클래스의 예시
-class Human1 {}
-
-// 생성자가 있는 클래스의 예시
-class Human2() {} // 인자 0개
-class Human3(age : Int) {} // 인자 1개
-class Human4(fistName : String, lastName : String) {} // 인자 2개 이상
-
-// 클래스 선언부에서 클래스명 옆에 괄호를 붙여 생성자를 만듦
-// -> 기본 생성자
-class Human(name : String) {
-
-    val name : String = name
-//    Property is explicitly assigned to parameter name, so it can be declared directly in constructor
+// class Human constructor(val name : String) {}
+// constructor 생략 가능
+class Human(val name : String) {
+    // 프로퍼티를 생성자에서 직접 선언 -> 코드 깔끔해짐
 
     fun eatingCake() {
         println("yummy!")
