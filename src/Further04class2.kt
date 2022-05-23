@@ -1,30 +1,34 @@
-// 클래스 보충설명
+// 생성자 보충설명 (1)
 
 fun main() {
 
-    // 인스턴스 객체 생성 후
-    val human = Human()
+    val human = Human("shinyelee")
 
-    // 점 연산자를 붙여 클래스 내 변수/함수에 접근 가능
     human.eatingCake()
+//    yummy!
+
+    println("My name is ${human.name}")
+//    My name is shinyelee
 
 }
 
-// Class(클래스) 생성
-class Human {
+// 생성자가 없는 클래스의 예시
+class Human1 {}
 
-    // Property(프로퍼티, 속성) //
-    // 클래스 안에 들어가는 변수
-    val name : String = "shinyelee"
-    // 프로퍼티 정의
+// 생성자가 있는 클래스의 예시
+class Human2() {} // 인자 0개
+class Human3(age : Int) {} // 인자 1개
+class Human4(fistName : String, lastName : String) {} // 인자 2개 이상
 
-    // Method(메서드, 함수) //
-    // 클래스 안에 들어가는 함수
+// 클래스 선언부에서 클래스명 옆에 괄호를 붙여 생성자를 만듦
+// -> 기본 생성자
+class Human(name : String) {
+
+    val name : String = name
+//    Property is explicitly assigned to parameter name, so it can be declared directly in constructor
+
     fun eatingCake() {
         println("yummy!")
     }
-    // 메서드 정의
-
-    // 클래스 안에는 다수의 속성과 메서드가 들어갈 수 있음
 
 }
