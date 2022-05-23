@@ -1,21 +1,23 @@
-// 생성자 보충설명 (2)
+// 생성자 보충설명 (3)
 
 fun main() {
 
     val human = Human("shinyelee")
 
+    // ()안에 name 안 넣어도 컴파일 오류가 나지 않음
+    // -> 기본값을 anonymous로 설정했기 때문
+    val who = Human()
+
     human.eatingCake()
 //    yummy!
 
-    println("My name is ${human.name}")
-//    My name is shinyelee
+    println("My name is ${who.name}")
+//    My name is anonymous
 
 }
 
-// class Human constructor(val name : String) {}
-// constructor 생략 가능
-class Human(val name : String) {
-    // 프로퍼티를 생성자에서 직접 선언 -> 코드 깔끔해짐
+// 디폴트값 부여함
+class Human(val name : String = "anonymous") {
 
     fun eatingCake() {
         println("yummy!")
