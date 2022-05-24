@@ -15,30 +15,30 @@
 
 fun main() {
 
-//    val a = General("신비", 1)
-//
-//    println(a == General("신비", 1))
-//    println(a.hashCode())
-//    println(a)
-////    false
-////    885951223
-////    General@34ce8af7
-//
-//    val b = Data("은하", 2)
-//
-//    println(b == Data("은하", 2))
-//    println(b.hashCode())
-//    println(b)
-////    true
-////    50711786
-////    Data(name=은하, id=2)
-//
-//    println(b.copy())
-//    println(b.copy("엄지"))
-//    println(b.copy(id = 3))
-////    Data(name=은하, id=2)
-////    Data(name=엄지, id=2)
-////    Data(name=은하, id=3)
+    val a = General("신비", 1)
+
+    println(a == General("신비", 1))
+    println(a.hashCode())
+    println(a)
+//    false
+//    885951223
+//    General@34ce8af7
+
+    val b = Data("은하", 2)
+
+    println(b == Data("은하", 2))
+    println(b.hashCode())
+    println(b)
+//    true
+//    50711786
+//    Data(name=은하, id=2)
+
+    println(b.copy())
+    println(b.copy("엄지"))
+    println(b.copy(id = 3))
+//    Data(name=은하, id=2)
+//    Data(name=엄지, id=2)
+//    Data(name=은하, id=3)
 
     val list = listOf(Data("보나",8),
                       Data("설아",12),
