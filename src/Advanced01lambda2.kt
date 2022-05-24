@@ -1,4 +1,4 @@
-// 람다 보충설명 (2)
+// 람다 보충설명 (3)
 
 fun main() {
 
@@ -31,6 +31,13 @@ fun main() {
 
     println(extendString("you", 3000))
 //    I love you 3000
+
+
+
+    // 람다의 return //
+
+    println(calculateGrade(74))
+//    Pass
 
 }
 
@@ -75,5 +82,23 @@ fun extendString(who : String, much : Int) : String {
     val ironMan : String.(Int) -> String = { "I love ${this} ${it}" }
 
     return who.ironMan(much)
+
+}
+
+
+
+// 람다의 return //
+
+// input 자료형은 () 필수
+// output 자료형은 () 생략 가능
+val calculateGrade : (Int) -> String = {
+
+    when(it) {
+        in 0..49 -> "Fail"
+        in 50..99 -> "Pass"
+        100 -> "Perfect"
+        else -> "Error"
+        // else 필수
+    }
 
 }
