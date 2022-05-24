@@ -1,4 +1,4 @@
-// 람다 보충설명 (3)
+// 람다 보충설명 (4)
 
 fun main() {
 
@@ -39,7 +39,33 @@ fun main() {
     println(calculateGrade(74))
 //    Pass
 
+    println(calculateGrade(999))
+//    Error
+
+
+
+    // 람다를 표현하는 여러가지 방법 //
+
+    val lambda : (Double) -> Boolean = { number : Double ->
+        number == 5.4321
+    }
+
+    // invokeLambda 안에 lambda를 넣어줌
+    // 5.4321 != 1.2345
+    println(invokeLambda(lambda))
+//    false
+
+    // it == 1.2345
+    // 1.2345 > 0.1
+    println(invokeLambda{it > 0.1})
+//    true
+
+    // 원래 이런 형태인데 () 생략 가능
+//    println(invokeLambda({it > 0.1}))
+
 }
+
+
 
 // 기본형
 // val 람다함수명 : (input 자료형) -> (output 자료형) = { 매개변수 -> 본문 }
@@ -58,10 +84,6 @@ val book : (String, Int) -> String = { title : String, many : Int ->
 val album = {title : String, many : Int ->
     "<${title}> ${many}장 주세요"
 }
-
-// 람다함수는 value처럼 다룰 수 있는 익명함수
-// 1. 메소드의 매개변수로 넘겨줄 수 있음
-// 2. 리턴값으로 쓸 수 있음
 
 
 
@@ -101,4 +123,16 @@ val calculateGrade : (Int) -> String = {
         // else 필수
     }
 
+}
+
+
+
+// 람다를 표현하는 여러가지 방법 //
+
+// 람다함수는 value처럼 다룰 수 있는 익명함수
+// 1. 메소드의 매개변수로 넘겨줄 수 있음
+// 2. 리턴값으로 쓸 수 있음
+
+fun invokeLambda(lambda : (Double) -> Boolean) : Boolean {
+    return lambda(1.2345)
 }
