@@ -13,39 +13,49 @@ fun main() {
 
     // 기본 인자가 없음
     read(7)
-    read("감사합니다")
 //    숫자 7 입니다
+    read("감사합니다")
 //    감사합니다
 
 
 
     // 꼭 모든 인자를 쓸 필요는 없음
+    // (count, destination 생략해도 됨)
     deliveryItem("짬뽕")
-    deliveryItem("책", 4)
-    deliveryItem("노트북", 1, "학교")
 //    짬뽕, 2개를 집에 배달 완료
+    deliveryItem("책", 4)
 //    책, 4개를 집에 배달 완료
+    deliveryItem("노트북", 1, "학교")
 //    노트북, 1개를 학교에 배달 완료
-
-    //    deliveryItem("선물",  "친구집")
-//    Kotlin: Type mismatch: inferred type is String but Int was expected
-
-    // Named Argument(명명된 인자, 지명 인자) //
-
-    // 파라미터 개수가 많거나, 기본값이 많을 때 가독성을 높여줌
-    // 파라미터의 순서와 관련없이 파라미터의 이름을 사용해 직접 파라미터 값 할당
-    // -> count 생략해도 정상적으로 실행됨
-    deliveryItem("선물",  destination = "친구집")
-//    선물, 2개를 친구집에 배달 완료
 
     Gfriend().umji()
 //    엄지의 데뷔일은 20150116
     Viviz().umji()
 //    재데뷔했어도 엄지의 데뷔일은 여전히 20150116
 
-    // first의 기본값이 사용됨
+    // first는 기본값이 사용됨
+    // second는 기본값 없기 때문에 지명 인자 필요
     apple(second = 2)
 //    first : 1, second : 2
+
+
+
+    // Named Argument(명명된 인자, 지명 인자) //
+
+    // 인자 생략해도 된댔는데 뭐가 문제일까?
+    // 이름을 안 써주면 컴퓨터는 쓰인 순서로 유추를 함(순서가 섞이면 안 됨)
+    // -> 그래서 뒤에 오는 인자의 생략은 괜찮은데, 앞이나 중간이 빠지면 곤란함
+    // -> count(Int)가 올 자리에 뜬금 destination(String)이 와서 생긴 문제
+    //    deliveryItem("선물",  "친구집")
+//    Kotlin: Type mismatch: inferred type is String but Int was expected
+
+    // 아래처럼 인자에 이름을 붙여주면
+    // -> 순서가 섞여도 이름표가 있으니 컴퓨터도 안 헷갈림
+    deliveryItem("선물",  destination = "친구집")
+//    선물, 2개를 친구집에 배달 완료
+
+    // 지명 인자는 파라미터 개수가 많거나, 기본값이 많을 때 가독성을 높여줌
+    // 파라미터의 순서와 무관하게 파라미터의 이름을 사용해 직접 파라미터 값 할당
 
 
 
@@ -82,7 +92,7 @@ fun read(x: String) {
 
 // Default Arguments(기본 인자, 파라미터의 기본값) //
 
-// (파라미터의) 기본값이 있으면 함수 호출시 해당 인자를 건너뛸 수 있음
+// (파라미터의) 기본값이 있으면 함수 호출시 해당 인자를 생략할 수 있음
 // (따로 써넣지 않아도 기본값으로 세팅되기 때문에)
 // -> 다른 언어에 비해 과부하 줄어듦
 fun deliveryItem(name: String, count: Int = 2, destination: String = "집") {
@@ -106,10 +116,11 @@ class Viviz : Gfriend() {
 // 오버라이딩 메서드에서는 해당 파라미터의 기본값을 따로 가질 수 없음
 
 // 기본값이 있는 파라미터가 기본값이 없는 파라미터 앞에 위치하면
+// 기본값은 지명 인자로 함수를 호출해야만 사용할 수 있음
 fun apple(first: Int = 1, second: Int) {
     println("first : $first, second : $second")
 }
-// 기본값은 지명 인자로 함수를 호출해야만 사용할 수 있음
+// first는 기본값 있고 second는 기본값 없는 상태
 
 
 
