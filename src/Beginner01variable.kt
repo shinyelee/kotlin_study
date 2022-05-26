@@ -42,7 +42,7 @@ fun main() {
     // Immutable Variable(불변 변수) //
 
     // 선언시에만 초기화
-    // 읽기만 가능(중간에 값 변경 불가)
+    // 읽기만 가능(중간에 값 변경 불가) <- 그치만 상수랑은 다름
     // 변수명 앞에 val 붙임
     // value -> val
 
@@ -51,7 +51,26 @@ fun main() {
 //    greeting5 = "Hello Kotlin!"
 //    Kotlin: Val cannot be reassigned
 
-    // 수정할 수 없는 변수를 만들고 싶다면 var 대신 val 사용
+    // Int 타입의 상수 whatType을 선언(냅다 자료형만 지정) 후
+    val whatType : Int
+    // Int 타입의 값을 대입해주는 건 가능함
+    whatType = 1
+    // 물론 재정의는 안 됨
+//    val whatType = 1
+//    Kotlin: Conflicting declarations: val whatType: Int, val whatType: Int
+
+    // 즉시 할당
+    val a: Int = 1
+
+    // (Int로) 타입 추론
+    val b = 2
+
+    // 자료형 먼저 명시한 후
+    val c: Int
+    // 나중에 할당(지연 초기화)
+    c = 3
+
+   // 수정할 수 없는 변수를 만들고 싶다면 var 대신 val 사용
 
 
 
