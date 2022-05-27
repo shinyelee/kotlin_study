@@ -1,4 +1,4 @@
-// 조건문 //
+// 조건식 //
 // if
 // else
 // when
@@ -159,10 +159,6 @@ fun main() {
 }
 
 
-
-// Expression VS Statement
-// 코틀린의 모든 함수는 expression
-// 자바는 반대로 statement
 
 // 조건문.ver
 //fun doWhen (a: Any) {
