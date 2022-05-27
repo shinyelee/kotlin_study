@@ -13,29 +13,55 @@ fun main() {
     var txt = Singer("연준", 1999)
     var aespa = Singer("윈터", 2001)
     var nmixx = Singer("설윤", 2004)
-//    안녕하세요, 1997년생 정국입니다.
-//    안녕하세요, 1999년생 연준입니다.
-//    안녕하세요, 2001년생 윈터입니다.
-//    안녕하세요, 2004년생 설윤입니다.
-
 //    println("안녕하세요, ${bts.birthYear}년생 ${bts.name}입니다.")
-    // 너무 번거로움 -> 아예 클래스 내에 함수로 넣어주면 됨
+    // 매번 쓰기 번거로움 -> 아예 클래스 내에 함수로 넣어주면 됨
 
-//    bts.introduce()
-//    txt.introduce()
-//    aespa.introduce()
-//    nmixx.introduce()
+
+
     // class내에 println function 추가 -> 코드가 훨씬 짧아짐
 
+//    bts.introduce()
+//    안녕하세요, 1997년생 정국입니다.
+
+//    txt.introduce()
+//    안녕하세요, 1999년생 연준입니다.
+
+//    aespa.introduce()
+//    안녕하세요, 2001년생 윈터입니다.
+
+//    nmixx.introduce()
+//    안녕하세요, 2004년생 설윤입니다.
+
+
+
     // 보조생성자 -> 자동으로 1997년생 됨
+
     var astro = Singer("은우")
-    var twice = Singer("지효")
 //    안녕하세요, 1997년생 은우입니다.
 //    보조생성자가 사용되었습니다.
+
+    var twice = Singer("지효")
 //    안녕하세요, 1997년생 지효입니다.
 //    보조생성자가 사용되었습니다.
 
 }
+
+
+
+// 클래스 기본 형태 //
+
+// class 클래스명(매개변수, 기본 생성자 등) { 본문 }
+
+// 있을 거 다 있는 클래스
+class Normal(name: String) { /* 내용 */ }
+
+// 몇몇 요소가 없는 클래스
+class Normal2() { /* 내용 */ }
+class Normal3()
+class Normal4 { /* 내용 */ }
+class Normal5
+
+
 
 // 클래스 속성(생성자) 선언
 //class Singer (var name: String, val birthYear: Int) {
@@ -43,6 +69,7 @@ fun main() {
 //        println("안녕하세요, ${birthYear}년생 ${name}입니다.")
 //    }
 //}
+
 // constructor(생성자) //
 // 새 인스턴스를 만들기 위해 호출하는 특수한 함수
 // 인스턴스 속성 초기화 && 인스턴스 생성시 구문 수행
@@ -70,4 +97,5 @@ class Singer (var name: String, val birthYear: Int)
         // : this 쓴 후 기본 생성자가 필요로 하는 파라미터를 ()안에 넣어주면 됨
         println("보조생성자가 사용되었습니다.")
     }
+
 }
