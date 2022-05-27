@@ -40,19 +40,31 @@ fun main() {
 
 
 
-    // Named Argument(명명된 인자, 지명 인자) //
+    // Named Arguments(명명된 인자, 지명 인자) //
 
     // 인자 생략해도 된댔는데 뭐가 문제일까?
-    // 이름을 안 써주면 컴퓨터는 쓰인 순서로 유추를 함(순서가 섞이면 안 됨)
-    // -> 그래서 뒤에 오는 인자의 생략은 괜찮은데, 앞이나 중간이 빠지면 곤란함
-    // -> count(Int)가 올 자리에 뜬금 destination(String)이 와서 생긴 문제
+    // 이름을 안 써주면 컴퓨터는 쓰인 위치로 유추함(위치 인자)
+    // -> 뒤에 오는 인자의 생략은 괜찮은데, 앞이나 중간이 빠지면 순서가 섞여 곤란함
     //    deliveryItem("선물",  "친구집")
 //    Kotlin: Type mismatch: inferred type is String but Int was expected
+    // -> count(Int)가 올 자리에 뜬금 destination(String)이 와서 생긴 문제
 
-    // 아래처럼 인자에 이름을 붙여주면
-    // -> 순서가 섞여도 이름표가 있으니 컴퓨터도 안 헷갈림
+    // 아래처럼 인자에 이름을 붙여주면(지명 인자)
+    // -> 인자의 위치가 뒤바뀌어도 이름표가 있으니 컴퓨터도 안 헷갈림
     deliveryItem("선물",  destination = "친구집")
 //    선물, 2개를 친구집에 배달 완료
+
+    // (위치 인자, 지명 인자) -> 문제 없음
+    deliveryItem("택배", destination = "우리집")
+//    택배, 2개를 우리집에 배달 완료
+
+    // (지명 인자, 위치 인자) -> 위치(순서)가 섞여버림
+//    deliveryItem(destination = "우리집", "택배")
+//    Kotlin: Mixing named and positioned arguments is not allowed
+
+    // 위치에 영향받지 않으려면 아예 모두 지명 인자로 바꾸면 됨
+    deliveryItem(destination = "우리집", name = "택배")
+//    택배, 2개를 우리집에 배달 완료
 
     // 지명 인자는 파라미터 개수가 많거나, 기본값이 많을 때 가독성을 높여줌
     // 파라미터의 순서와 무관하게 파라미터의 이름을 사용해 직접 파라미터 값 할당
@@ -61,7 +73,7 @@ fun main() {
 
     sum(1, 2, 3, 4)
     println()
-//        10
+//    10
 
 
 
